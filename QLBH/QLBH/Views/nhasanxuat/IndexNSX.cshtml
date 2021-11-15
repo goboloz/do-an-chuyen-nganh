@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+<h2>Thông tin các nhà sản xuất</h2>
+<p>
+    <a href="@Url.Action("themNSX")">Thêm mới</a>
+</p>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <th>Tên nhà sản xuất</th>
+        <th>Địa chỉ</th>
+        <th>Tác vụ</th>
+    </tr>
+    @{
+        foreach (var item in ViewBag.nsx)
+        {
+        <tr>
+            <td>@item.tennsx</td>
+            <td>@item.diachi</td>
+            <td>
+                <a href="@Url.Action("suaNSX","nhasanxuat",new { id =
+                    item.mansx })">Sửa</a> |
+                <a href="@Url.Action("xoaNSX","nhasanxuat",new { id =
+                    item.mansx })">Xóa</a>
+            </td>
+        </tr>
+        }
+    }
+</table>

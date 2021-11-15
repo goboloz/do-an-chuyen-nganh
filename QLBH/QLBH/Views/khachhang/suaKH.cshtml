@@ -1,0 +1,54 @@
+﻿@using QLBH.Models;
+@{
+    Layout = null;
+}
+<form action="suaKH" method="post">
+    <div class="form-horizontal">
+        <h2>Sửa thông tin nhân viên</h2>
+        @{
+            khachhang n = ViewBag.kh;
+        }
+        <div class="form-group">
+            @*name trùng với tên field được binding*@
+            <input name="makh" type="hidden" value="@n.makh" maxlength="50" /><br />
+        </div>
+        <div class="form-group">
+            <b>Tên khách hàng</b><br />
+            <input name="tenkh" type="text" value="@n.tenkh" maxlength="50" /><br />
+        </div>
+        <br />
+        <div class="form-group">
+            <b>năm sinh</b><br />
+            <input name="namsinh" type="number" value="@n.namsinh" maxlength="4" /><br />
+        </div>
+        <br />
+        <div class="form-group">
+            <b>Phái</b><br />
+            <input name="phai" type="radio" value="true" checked />Nam
+            <input name="phai" type="radio" value="false" />Nữ
+        </div>
+        <br />
+        <div class="form-group">
+            <b>Điện thoại</b><br />
+            <input name="dienthoai" type="text" value="@n.dienthoai" maxlength="50" /><br />
+        </div>
+        <br />
+        <div class="form-group">
+            <b>Địa chỉ</b><br />
+            <input name="diachi" type="text" value="@n.diachi" maxlength="50" /><br />
+        </div>
+        <div class="form-group">
+            <b>Password</b><br />
+            <input name="password" type="text" value="@n.password" maxlength="50" /><br />
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <input type="submit" value="Lưu" />
+        </div>
+        <br />
+        <div>
+            <a href="@Url.Action("IndexKH")">Quay lại</a>
+        </div>
+    </div>
+</form>

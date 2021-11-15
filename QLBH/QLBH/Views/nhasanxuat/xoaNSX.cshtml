@@ -1,0 +1,36 @@
+﻿@using QLBH.Models
+@{
+    Layout = null;
+}
+<h2>Xóa thông tin nhà sản xuất</h2>
+<h3>Bạn muốn xóa nhà sản xuất này ?</h3>
+<form method="post">
+    <div class="form-group">
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>Tên nhà sản xuất</th>
+                <th>Địa chỉ</th>
+            </tr>
+            <tr>
+                @{
+                    nhasanxuat n = ViewBag.nsx;
+                }
+                <td>
+                    <input type="hidden" name="mansx" value="@n.mansx" />
+                    <label for="tennsx">@n.tennsx</label>
+                </td>
+                <td>
+                    <label for="diachi">@n.diachi</label>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="submit" value="Xóa" />
+    </div>
+    <br />
+    <div>
+        <a href="@Url.Action("indexNSX")">Quay lại</a>
+    </div>
+</form>

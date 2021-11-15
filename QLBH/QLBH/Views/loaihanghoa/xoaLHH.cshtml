@@ -1,0 +1,36 @@
+﻿@using QLBH.Models
+@{
+    Layout = null;
+}
+<h2>Xóa thông tin loại hàng</h2>
+<h3>Bạn muốn xóa loại hàng này ?</h3>
+<form method="post">
+    <div class="form-group">
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>mã loại</th>
+                <th>tên loại</th>
+            </tr>
+            <tr>
+                @{
+                    loaihanghoa l = ViewBag.lhh;
+                }
+                <td>
+                    <input type="hidden" name="maloai" value="@l.maloai" />
+                    <label for="maloai">@l.maloai</label>
+                </td>
+                <td>
+                    <label for="tenloai">@l.tenloai</label>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="submit" value="Xóa" />
+    </div>
+    <br />
+    <div>
+        <a href="@Url.Action("IndexLHH")">Quay lại</a>
+    </div>
+</form>

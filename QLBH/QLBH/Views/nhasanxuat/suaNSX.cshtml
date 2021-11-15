@@ -1,0 +1,33 @@
+﻿@using QLBH.Models;
+@{
+    Layout = null;
+}
+<form action="suaNSX" method="post">
+    <div class="form-horizontal">
+        <h2>Sửa thông tin nhà sản xuất</h2>
+        @{
+            nhasanxuat n = ViewBag.nsx;
+        }
+        <div class="form-group">
+            @*name trùng với tên field được binding*@
+            <input name="mansx" type="hidden" value="@n.mansx" maxlength="50" /><br />
+        </div>
+        <div class="form-group">
+            <b>Tên nhà sản xuất</b><br />
+            <input name="tennsx" type="text" value="@n.tennsx" maxlength="50" /><br />
+        </div>
+        <br />
+        <div class="form-group">
+            <b>Địa chỉ</b><br />
+            <input name="diachi" type="text" value="@n.diachi" maxlength="50" /><br />
+        </div>
+        <br />
+        <div class="form-group">
+            <input type="submit" value="Lưu" />
+        </div>
+        <br />
+        <div>
+            <a href="@Url.Action("indexNSX")">Quay lại</a>
+        </div>
+    </div>
+</form>

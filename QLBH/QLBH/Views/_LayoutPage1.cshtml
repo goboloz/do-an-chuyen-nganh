@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <title>_LayoutPage1</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                Header
+            </div>
+            <div class="card-title">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="nav nav-tabs">
+                            <div class="nav-item bg-primary">
+                                <div class="nav-link">
+                                    <a href="@Url.Action("Index","Home")"
+                                       class="text-white">Trang chủ</a>
+                                </div>
+                            </div>
+                            <div class="nav-item bg-primary">
+                                <div class="nav-link">
+                                    @Html.ActionLink("Trang chủ", "Index",
+                                   "Home", null, new { @class = "text-white" })
+                                </div>
+                            </div>
+                            <div class="nav-item bg-primary">
+                                <div class="nav-link">
+                                    @Html.ActionLink("Trang chủ", "Index",
+                                   "Home", null, new { @class = "text-white" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="nav nav-tabs float-right">
+                            <div class="nav-item bg-primary">
+                                <div class="nav-link">
+                                    @Html.ActionLink("Trang chủ", "Index",
+                                   "Home", null, new { @class = "text-white" })
+                                </div>
+                            </div>
+                            <div class="nav-item bg-primary">
+                                <div class="nav-link">
+                                    @Html.ActionLink("Trang chủ", "Index",
+                                   "Home", null, new { @class = "text-white" })
+                                </div>
+                            </div>
+                            <div class="nav-item bg-primary">
+                                <div class="nav-link">
+                                    @Html.ActionLink("Quay lại", "IndexNV")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="nav nav-tabs">
+                            <div class="nav-item bg-primary">
+                                <div class="nav-link">
+                                    @Html.ActionLink("Quản Lý Nhân Viên", "IndexNV",
+                                   "nhansanxuatController", null, new { @class = "text-white" })
+                                </div>
+                                <div class="nav-link">
+                                    @Html.ActionLink("Quản Lý Khách hàng", "IndexKH",
+                                   "khachhangController", null, new { @class = "text-white" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-secondary text-white">
+                Footer
+            </div>
+        </div>
+    </div>
+</body>
+</html>

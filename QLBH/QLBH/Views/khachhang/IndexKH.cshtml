@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+<h2>Thông tin khách hàng</h2>
+<p>
+    <a href="@Url.Action("themKH")">Thêm mới</a>
+</p>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <th>Mã khách hàng</th>
+        <th>Tên khách hàng</th>
+        <th>năm sinh</th>
+        <th>Phái</th>
+        <th>Điện thoại</th>
+        <th>Địa chỉ</th>
+        <th>Password</th>
+        <th>Tác vụ</th>
+    </tr>
+    @{
+        foreach (var item in ViewBag.kh)
+        {
+        <tr>
+            <td>@item.makh</td>
+            <td>@item.tenkh</td>
+            <td>@item.namsinh</td>
+            <td>@(item.phai == true?"Nam":"Nu")</td>
+            <td>@item.dienthoai</td>
+            <td>@item.diachi</td>
+            <td>@item.password</td>
+            <td>
+                <a href="@Url.Action("suaKH","khachhang",new { id = item.makh })">Sửa</a> |
+                <a href="@Url.Action("xoaKH","khachhang",new { id = item.makh })">Xóa</a>
+            </td>
+        </tr>
+        }
+    }
+</table>

@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+<form action="themNSX" method="post">
+    <div class="form-horizontal">
+        <h2>Thêm nhà sản xuất</h2>
+        <div class="form-group">
+            @*name trùng với tên field được binding*@
+            <b>Mã nhà sản xuất</b><br />
+            <input name="mansx" type="text" value="" maxlength="50" /><br /><br />
+        </div>
+        <div class="form-group">
+            <b>Tên nhà sản xuất</b><br />
+            <input name="tennsx" type="text" value="" maxlength="50" /><br /><br />
+        </div>
+        <div class="form-group">
+            <b>Địa chỉ</b><br />
+            <input name="diachi" type="text" value="" maxlength="50" /><br /><br />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Save" /><br /><br />
+        </div>
+        <div>
+            <a href="@Url.Action("indexNSX")">Quay lại</a>
+        </div>
+    </div>
+</form>
