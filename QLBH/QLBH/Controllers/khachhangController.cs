@@ -13,7 +13,7 @@ namespace QLBH.Controllers
     public class khachhangController : Controller
     {
         QLBHDBContext db = new QLBHDBContext();
-        // GET: khachhang
+
         public ActionResult IndexKH()
         {
             ViewBag.kh = db.khachhangs;

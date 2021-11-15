@@ -145,9 +145,6 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\khachhangController.cs" />
-    <Compile Include="Controllers\loaihanghoaController.cs" />
-    <Compile Include="Controllers\nhanvienController.cs" />
-    <Compile Include="Controllers\nhasanxuatController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -167,21 +164,7 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
-    <Content Include="Views\nhasanxuat\IndexNSX.cshtml" />
-    <Content Include="Views\nhasanxuat\themNSX.cshtml" />
-    <Content Include="Views\loaihanghoa\IndexLHH.cshtml" />
-    <Content Include="Views\loaihanghoa\themLHH.cshtml" />
-    <Content Include="Views\nhanvien\IndexNV.cshtml" />
-    <Content Include="Views\nhanvien\themNV.cshtml" />
-    <Content Include="Views\nhasanxuat\suaNSX.cshtml" />
-    <Content Include="Views\nhasanxuat\xoaNSX.cshtml" />
-    <Content Include="Views\loaihanghoa\suaLHH.cshtml" />
-    <Content Include="Views\loaihanghoa\xoaLHH.cshtml" />
-    <Content Include="Views\nhanvien\suaNV.cshtml" />
-    <Content Include="Views\nhanvien\xoaNV.cshtml" />
     <Content Include="Views\khachhang\IndexKH.cshtml" />
-    <Content Include="Views\khachhang\themKH.cshtml" />
-    <Content Include="Views\khachhang\suaKH.cshtml" />
     <Content Include="Views\_LayoutPage1.cshtml" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
